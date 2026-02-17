@@ -51,6 +51,7 @@ body.dark-mode {
     width: 100%;
 }
 
+/* ========== HEADER - RASMDAGIDEK ========== */
 .header {
     display: flex;
     justify-content: space-between;
@@ -95,6 +96,7 @@ body.dark-mode {
     font-size: 15px;
 }
 
+/* ========== THEME TOGGLE - RASMDAGI TOGGLE ========== */
 .theme-switch-wrapper {
     display: flex;
     align-items: center;
@@ -170,6 +172,7 @@ body.dark-mode {
     background-color: #60A5FA;
 }
 
+/* ========== FILTER BUTTONS - AYNAN RASMDAGI ========== */
 .filter-area {
     margin-bottom: 35px;
     border-bottom: 2px solid #E9EDF3;
@@ -222,7 +225,7 @@ body.dark-mode {
     border-color: #3B82F6;
 }
 
-/* ========== PRODUCT GRID ========== */
+/* ========== PRODUCT GRID - AYNAN RASMDAGI KARTALAR ========== */
 .product-grid {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
@@ -230,7 +233,26 @@ body.dark-mode {
     margin-bottom: 50px;
 }
 
-/* PRODUCT CARD - */
+/* RESPONSIVE GRID */
+@media (min-width: 576px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 992px) {
+    .product-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 1200px) {
+    .product-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* PRODUCT CARD - AYNAN RASMDAGI DEKORATSIYA */
 .product-card {
     background-color: white;
     border: 1px solid #EBF0F5;
@@ -257,7 +279,7 @@ body.dark-mode {
     box-shadow: 0 12px 24px rgba(0,0,0,0.3);
 }
 
-/* PRODUCT IMAGE */
+/* PRODUCT IMAGE - AYNAN RASMDAGI KULRANG BACKGROUND */
 .product-image {
     background-color: #F4F7FC;
     width: 100%;
@@ -277,7 +299,7 @@ body.dark-mode {
     color: #97A9C2;
 }
 
-/* CATEGORY LABEL */
+/* CATEGORY LABEL - KICHIK KO'K TEXT */
 .product-category {
     font-size: 13px;
     font-weight: 700;
@@ -814,6 +836,41 @@ padding-left: 24px;
     transform: translateY(-2px);
 }
 
+/* Responsive */
+@media (max-width: 768px) {
+    .cart-panel {
+        width: 100%;
+        right: -100%;
+    }
+    
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .header-right {
+        width: 100%;
+        justify-content: space-between;
+    }
+    
+    .main-left {
+        width: 100%;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .cart-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    
+    .cart-item-controls {
+        width: 100%;
+        justify-content: flex-end;
+    }
+}
 /* ========== CART STYLE FIX ========== */
 
 /* Cart panel umumiy stili */
