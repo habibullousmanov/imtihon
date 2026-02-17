@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover / Electronics</title>
+    
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+        
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main-left">
+        <ul type="none">
+            <li>🏠 Home</li>
+        </ul>
+        <ul class="ul-li" type="none">
+             <li>🏠 Discover</li>
+            <ul class="ul-li2"  type="none">
+                <li>Electronics</li>
+                <li>Bags</li>
+                <li>Food</li>
+            </ul>
+        </ul>
+                <ul type="none">
+            <li>📦 Popular Products</li>
+            <li>🕴️ Top Authors</li>
+            <li>🛜 Feed</li>
+            <li>📡 Contact</li>
+        </ul>
+    </div>
+    <div class="wrapper">
+        <!-- ASOSIY KONTENER -->
+        <div class="main-container">
+            
+  <!-- HEADER -->
+<div class="header">
+    <div class="header-left">
+        <h1 class="main-title">
+            Discover 
+            <span class="highlight">/ Electronics</span>
+        </h1>
+        <p class="update-text">
+            <i class="far fa-calendar-alt"></i>
+            Best Selling Electronics Products - Weekly Update.
+        </p>
+    </div>
+    
+    <!-- Header Right - Savat va Theme -->
+    <div class="header-right">
+        <!-- Savat ikonasi -->
+        <div class="cart-icon" id="cartIcon">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="cart-count" id="cartCount">0</span>
+        </div>
+        
+        <!-- THEME TOGGLE -->
+        <div class="theme-switch-wrapper">
+            <span class="theme-label">Theme:</span>
+            <button id="themeToggle" class="theme-switch">
+                <i class="fas fa-sun"></i>
+                <i class="fas fa-moon"></i>
+                <span class="switch-ball"></span>
+            </button>
+        </div>
+    </div>
+</div>
+            
+            <!-- FILTER SECTION (AYNAN RASMDAGI KATEGORIYALAR) -->
+            <div class="filter-area">
+                <div class="filter-buttons" id="filterButtons"></div>
+            </div>
+            
+            <div id="productGrid" class="product-grid"></div>
+    <button id="loadMoreBtn">Load More</button>
+    
+
+            <!-- FOOTER (AYNAN RASMDAGI) -->
+            <div class="footer">
+                <div class="footer-links">
+                    <a href="#">Terms</a>
+                    <span class="dot">|</span>
+                    <a href="#">Privacy</a>
+                    <span class="dot">|</span>
+                    <a href="#">Help</a>
+                </div>
+                <div class="copyright">
+                    Copyright © 2022 By UI-Ub
+                </div>
+            </div>
+            
+        </div>
+    </div>
+<!-- Savat paneli -->
+<div class="cart-panel" id="cartPanel">
+    <div class="cart-header">
+        <h3>Savat <span class="cart-items-count" id="cartItemsCount"></span></h3>
+        <button class="cart-close" id="cartClose">
+            <i class="fas fa-times"></i>
+        </button>
+    </div>
+    <div class="cart-items" id="cartItems">
+        <div class="empty-cart">
+            <i class="fas fa-shopping-cart"></i>
+            <p>Savat bo'sh</p>
+        </div>
+    </div>
+    <div class="cart-footer">
+        <div class="cart-total">
+            <span>Jami:</span>
+            <span class="total-amount" id="cartTotal">$0.00</span>
+        </div>
+        <button class="checkout-btn">
+            <i class="fas fa-check"></i> Sotib olish
+        </button>
+    </div>
+</div>
+
+<!-- Yuklash animatsiyasi -->
+<div class="loading" id="loading" style="display: none;">
+    <i class="fas fa-spinner fa-spin"></i>
+    Yuklanmoqda...
+</div>
+    <!-- DATA JS -->
+    <script src="data.js"></script>
+    
+    <!-- SCRIPT JS -->
+    <script src="./app.js"></script>
+</body>
+</html>
