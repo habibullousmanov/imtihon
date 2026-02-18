@@ -11,16 +11,23 @@ body {
     color: #1A1E24;
     line-height: 1.5;
     transition: background-color 0.2s ease;
-    padding: 30px 20px;
     display: flex;
 }
 .main-left{
-    width: 300px;
+    width: 360px;
+    margin: 0;
+height: 1466px;
+padding-top: 24px;
+padding-top: 40px;
+padding-bottom: 24px;
+padding-left: 50px;
+gap: 726px;
+opacity: 1;
     display: flex;
     gap: 30px;
     align-items: start;
-    padding: 20px;
-    padding-top: 40px;
+    background-color: #191922;
+    margin-right: 40px;
 }
 .main-left ul{
     display: flex;
@@ -45,6 +52,8 @@ body.dark-mode {
 .wrapper {
     max-width: 1280px;
     margin: 0 auto;
+    padding-top: 40px;
+    padding: 30px;
 }
 
 .main-container {
@@ -1349,4 +1358,11 @@ padding-left: 24px;
     flex: 1;
     max-width: 45%;
     white-space: nowrap;
+}
+.main-left {
+    background: #ebeced;
+}
+
+body.dark-mode .main-left {
+    background: #0f172a;
 }

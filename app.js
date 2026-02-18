@@ -13,14 +13,22 @@ function initTheme() {
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme === 'dark') {
         document.body.classList.add('dark-mode');
+
     }
 }
 
 function toggleTheme() {
     document.body.classList.toggle('dark-mode');
+
+    const sidebar = document.querySelector('.main-left');
+    if (sidebar) {
+        sidebar.classList.toggle('dark-mode');
+    }
+
     const isDark = document.body.classList.contains('dark-mode');
     localStorage.setItem('theme', isDark ? 'dark' : 'light');
 }
+
 
 // ========== DISCOVER TOGGLE ==========
 function setupDiscoverToggle() {
@@ -246,7 +254,6 @@ function removeFromCart(productId) {
     cart = cart.filter(item => item.id !== productId);
     updateCart();
     showNotification('Mahsulot savatdan o\'chirildi');
-    
     // Mahsulot kartasidagi tugmani yangilash
     const productCard = document.querySelector(`.product-card[data-id="${productId}"] .add-to-cart-btn`);
     if (productCard) {
