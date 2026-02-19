@@ -514,6 +514,7 @@ body.dark-mode {
 }
 .main-left ul li{
     text-decoration: none;
+    cursor: pointer;
 }
 
 #loadMoreBtn{
