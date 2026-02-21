@@ -219,6 +219,7 @@ function addToCart(productId) {
     if (!product) return;
 
     const existing = cart.find(item => item.id === productId);
+
     if (existing) {
         existing.quantity += 1;
     } else {
@@ -231,7 +232,18 @@ function addToCart(productId) {
             quantity: 1
         });
     }
+
     updateCart();
+
+    const activeBtn = document.querySelector('.filter-btn.active');
+    const currentCategory = activeBtn ? activeBtn.dataset.filter : 'all';
+
+    if (currentCategory === 'all') {
+        renderProducts(PRODUCTS.slice(0, 8));
+    } else {
+        const filtered = PRODUCTS.filter(p => p.category === currentCategory);
+        renderProducts(filtered.slice(0, 8));
+    }
 }
 
 function removeFromCart(productId) {
@@ -307,5 +319,4 @@ function addEventListeners() {
     document.getElementById('cartIcon')?.addEventListener('click', toggleCart);
     document.getElementById('cartClose')?.addEventListener('click', toggleCart);
 
-    // Savat panel endi faqat X bosilganda yopiladi
 }
