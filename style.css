@@ -14,7 +14,7 @@ body {
     display: flex;
 }
 .main-left{
-    width: 360px;
+    width: 500px;
     margin: 0;
 height: 1466px;
 padding-top: 24px;
@@ -32,10 +32,18 @@ opacity: 1;
 .main-left ul{
     display: flex;
     flex-direction: column;
+    width: 250px;
     gap: 30px;
 }
+
 .main-left ul li{
     font-size: 19px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.main-left ul li img{
+  width: 30px;
 }
 .ul-li2{
     display: flex;
